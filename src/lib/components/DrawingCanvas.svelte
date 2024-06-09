@@ -21,8 +21,10 @@
     }
 
     const canvasBoundingRect = canvas.getBoundingClientRect();
-    const x = mouseEvent.clientX - canvasBoundingRect.x;
-    const y = mouseEvent.clientY - canvasBoundingRect.y;
+    // Adjust for scaling on mobile, if we can't show the entire canvas
+    const x = (mouseEvent.clientX - canvasBoundingRect.x) * Constants.CANVAS_WIDTH / canvasBoundingRect.width;
+    const y = (mouseEvent.clientY - canvasBoundingRect.y) * Constants.CANVAS_HEIGHT / canvasBoundingRect.height;
+    console.log(x, y)
     points.push({
       x: x - Constants.CANVAS_WIDTH / 2,
       y: Constants.CANVAS_HEIGHT / 2 - y
