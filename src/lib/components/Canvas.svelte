@@ -36,5 +36,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: min(100%, var(--canvas-width));
+    aspect-ratio: 1;
   }
 </style>

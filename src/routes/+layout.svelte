@@ -30,4 +30,9 @@
   h1 {
     margin: var(--margin-md) 0;
   }
+  @media only screen and (max-width: 850px) {
+    h1 {
+			text-align: center;
+		}
+	}
 </style>

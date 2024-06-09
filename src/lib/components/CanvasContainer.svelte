@@ -1,13 +1,5 @@
-<script lang="ts">
-	import { Constants } from "$lib/Constants";
-</script>
-
 <div
   id="canvas_container"
-  style={`
-		width: ${Constants.CANVAS_WIDTH + 2 * Constants.CANVAS_BORDER_WIDTH}px;
-		height: ${Constants.CANVAS_HEIGHT + 2 * Constants.CANVAS_BORDER_WIDTH}px
-	`}
 >
   <slot></slot>
 </div>
@@ -15,5 +7,13 @@
 <style>
 	#canvas_container {
 		position: relative;
+		width: calc(var(--canvas-width) - var(--border-width));
+	}
+
+	@media only screen and (max-width: 850px) {
+    #canvas_container {
+			width: min(100%, calc(var(--canvas-width) - var(--border-width)));
+			aspect-ratio: 1;
+		}
 	}
 </style>
