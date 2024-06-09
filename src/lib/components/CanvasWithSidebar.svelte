@@ -14,6 +14,7 @@
 	@media only screen and (max-width: 850px) {
     div {
 			flex-direction: column;
+			gap: var(--margin-lg);
 		}
 	}
 </style>

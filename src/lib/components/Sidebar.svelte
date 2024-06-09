@@ -28,4 +28,8 @@
     font-weight: bold;
     font-size: 1.2rem;
   }
+
+  .sidebar-links {
+    padding-top: var(--margin-md);
+  }
 </style>
