@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+  --color-light: #FFFFFA;
+  --color-dark: #151515;
+  --color-primary: #71A9F7;
+  --color-error: #bc1212;
+  
+  --body-padding: 50px;
+  --border-width: 2px;
+
+  --margin-xs: 3px;
+  --margin-sm: 5px;
+  --margin-md: 10px;
+  --margin-lg: 30px;
+
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: calc(100vh - 2 * var(--body-padding));
+  padding: var(--body-padding) 0;
+  margin: 0;
+  background-color: var(--color-light);
+}
+
+p, h1 {
+  color: var(--color-dark);
+  margin: 0;
+}
+
+canvas {
+  border: var(--border-width) solid var(--color-dark);
+}
+
+a {
+  color: var(--color-dark);
+  font-size: 1rem;
+}
+
+.help, .error {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: var(--margin-xs) 0;
+}
+
+.error {
+  color: var(--color-error);
+}
+
+button, input {
+  padding: var(--margin-md);
+  margin: var(--margin-sm) 0;
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  border: var(--border-width) solid var(--color-dark);
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+button.active {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
